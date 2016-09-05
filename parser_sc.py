@@ -1,7 +1,8 @@
 import unittest
 from basic.read_char import *
 from basic.create_file_for_test import *
-from basic.global_variable import  *
+
+line_num = 1
 
 
 class ParserTest(unittest.TestCase):
@@ -79,9 +80,9 @@ def skip_white_space(f, ch):
             ch = get_ch(f)
             if ch != '\n':
                 return ch
-            line_num = line_num + 1
+            line_num += 1
         elif ch == '\n':
-            line_num = line_num + 1
+            line_num += 1
         print(ch, end="")
         ch = get_ch(f)
     return ch
@@ -97,7 +98,7 @@ def parse_comment(f):
             else:
                 ch = get_ch(f)
         if ch == '\n':
-            line_num = line_num + 1
+            line_num += 1
             ch = get_ch(f)
         elif ch == '*':
             ch = get_ch(f)

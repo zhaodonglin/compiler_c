@@ -12,7 +12,6 @@ def cur_pos(f):
 
 
 def read_to_buffer(f, begin, end):
-    buf = ''
     f.seek(begin)
     buf = f.read(end - begin)
     return buf

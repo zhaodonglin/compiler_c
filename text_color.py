@@ -33,7 +33,7 @@ f = open("C:\\test.sc", "r")
 ch = get_ch(f)
 
 k = 0
-while (ch != ''):
+while ch != '':
     ch = get_token(f, ch)
-    k = k + 1
+    k += 1
 f.close()
