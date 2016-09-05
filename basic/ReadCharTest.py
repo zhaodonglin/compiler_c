@@ -1,9 +1,9 @@
 import unittest
-from read_char import *
+from read_char import get_ch, unget_ch
 from create_file_for_test import create_file_for_test
 
 
-class test_read_char(unittest.TestCase):
+class ReadCharTest(unittest.TestCase):
     file_name = "C:\\read_char.txt"
     _str = "I love you"
 
@@ -24,6 +24,7 @@ class test_read_char(unittest.TestCase):
     def test_unget_ch(self):
         f = open(self.file_name, "r")
         ch = get_ch(f)
+        self.assertEqual(ch, 'I')
         unget_ch(f)
         ch = get_ch(f)
         self.assertEqual(ch, 'I')
