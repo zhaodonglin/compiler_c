@@ -28,12 +28,11 @@ def get_token(f, ch):
     return ch
 
 
-f = open("C:\\test.sc", "r")
-
-ch = get_ch(f)
-
-k = 0
-while ch != '':
-    ch = get_token(f, ch)
-    k += 1
-f.close()
+if __name__ == "__main__":
+    f = open("C:\\test.sc", "r")
+    ch = get_ch(f)
+    k = 0
+    while ch != '':
+        ch = get_token(f, ch)
+        k += 1
+    f.close()

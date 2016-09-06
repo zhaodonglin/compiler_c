@@ -1,6 +1,6 @@
 import unittest
-from read_char import get_ch, unget_ch
-from create_file_for_test import create_file_for_test
+from basic.read_char import get_ch, unget_ch
+from basic.create_file_for_test import create_file_for_test
 
 
 class ReadCharTest(unittest.TestCase):
