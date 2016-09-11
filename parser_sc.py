@@ -1,6 +1,7 @@
 import unittest
 from basic.read_char import *
 from basic.create_file_for_test import *
+from basic.token_code import *
 
 line_num = 1
 
@@ -134,8 +135,25 @@ def parse_identifer(f, ch):
         identifier = identifier + ch
         ch = get_ch(f)
     unget_ch(f)
-    return identifier
+    return identifier, Token_Code.TK_IDENT
 
+
+def parse_number(f, ch):
+    identifier = ""
+    while ch.isdigit():
+        identifier = identifier+ch
+        ch = get_ch(f)
+    unget_ch(f)
+    return identifier, Token_Code.TK_CINT
+
+
+def parse_with_next_char(f, firstchar, nextchar, first_token, next_token):
+    ch = get_ch(f)
+    if ch == nextchar:
+        return firstchar+nextchar, next_token
+    else:
+        unget_ch(f)
+        return firstchar, first_token
 
 if __name__ == '__main__':
     unittest.main()
