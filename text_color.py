@@ -43,6 +43,8 @@ def get_lex_type(f, ch):
         return parse_identifer(f, ch)
     if ch.isdigit():
         return parse_number(f, ch)
+    if ch == "\"":
+        return parse_string(f)
     else:
         return "unkown", Token_Code.TK_INVALID
 

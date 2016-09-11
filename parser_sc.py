@@ -138,6 +138,15 @@ def parse_identifer(f, ch):
     return identifier, Token_Code.TK_IDENT
 
 
+def parse_string(f):
+    string = ""
+    nxt_ch = get_ch(f)
+    while nxt_ch != "\"":
+        string += nxt_ch
+        nxt_ch = get_ch(f)
+    return string, Token_Code.TK_CSTR
+
+
 def parse_number(f, ch):
     identifier = ""
     while ch.isdigit():
