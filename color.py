@@ -1,5 +1,5 @@
 import ctypes
-
+import sys
 STD_INPUT_HANDLE = -10
 STD_OUTPUT_HANDLE = -11
 STD_ERROR_HANDLE = -12
@@ -25,4 +25,14 @@ def reset_color():
     set_cmd_color(FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE)
 
 
+def printDarkBlue(mess):
+    set_cmd_color(FOREGROUND_GREEN)
 
+    print(mess)
+
+    reset_color()
+
+
+
+if __name__ == "__main__":
+    printDarkBlue("ddd")

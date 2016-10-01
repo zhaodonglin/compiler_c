@@ -18,6 +18,7 @@ token_type_map_without_next_char = {
     "}": Token_Code.TK_END,
     ";": Token_Code.TK_SEMICOLON,
     ",": Token_Code.TK_COMMA
+
 }
 
 token_type_map_with_next_char = {
@@ -51,8 +52,14 @@ def get_lex_type(f, ch):
 
 def get_token(f, ch):
     first_not_separate_char = pre_process(f, ch)
-    lex_type, word = get_lex_type(f, first_not_separate_char)
-    print (lex_type, str(word))
+    word, token_type= get_lex_type(f, first_not_separate_char)
+    if token_type == Token_Code.TK_IDENT:
+        set_cmd_color(FOREGROUND_BLUE)
+    elif token_type == Token_Code.TK_BEGIN or token_type == Token_Code.TK_END:
+        set_cmd_color(FOREGROUND_GREEN)
+    else:
+        reset_color()
+    print(word, end="", flush=True)
     next_char = get_ch(f)
     return next_char
 

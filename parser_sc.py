@@ -107,7 +107,7 @@ def parse_comment(f):
                 ch = get_ch(f)
                 return ch
         else:
-            print("no end of comments untill the end of file")
+            print("no end of comments until the end of file")
             return "no"
 
 
@@ -115,7 +115,6 @@ def pre_process(f, ch):
     while True:
         if ch == ' ' or ch == '\t' or ch == '\r' or ch == '\n':
             ch = skip_white_space(f, ch)
-
         elif ch == '/':
             ch = get_ch(f);
             if ch == '*':
