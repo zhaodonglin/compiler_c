@@ -128,13 +128,44 @@ def pre_process(f, ch):
     return ch
 
 
+
+
+keyword_map = {"int": Token_Code.KW_INT,
+               'char': Token_Code.KW_CHAR,
+               'short': Token_Code.KW_SHORT,
+               "void": Token_Code.KW_VOID,
+               'struct': Token_Code.KW_STRUCT,
+               "if": Token_Code.KW_IF,
+               "else": Token_Code.KW_ELSE,
+               "for": Token_Code.KW_FOR,
+               'continue': Token_Code.KW_CONTINUE,
+               'break': Token_Code.KW_BREAK,
+               'return': Token_Code.KW_RETURN,
+               'sizeof': Token_Code.KW_SIZEOF}
+
+
+def parse_key_word(name):
+    if name in keyword_map:
+        return keyword_map[name]
+    else:
+        return None
+
+
 def parse_identifer(f, ch):
     identifier = ""
     while ch.isdigit() or ch.isalpha() or ch == '_':
         identifier = identifier + ch
         ch = get_ch(f)
     unget_ch(f)
-    return identifier, Token_Code.TK_IDENT
+    key_word_type = parse_key_word(identifier)
+
+    if key_word_type is None:
+        return identifier, Token_Code.TK_IDENT
+    else:
+        return identifier, key_word_type
+
+
+
 
 
 def parse_string(f):

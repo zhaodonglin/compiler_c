@@ -53,10 +53,14 @@ def get_lex_type(f, ch):
 def get_token(f, ch):
     first_not_separate_char = pre_process(f, ch)
     word, token_type= get_lex_type(f, first_not_separate_char)
+    reset_color()
+
     if token_type == Token_Code.TK_IDENT:
         set_cmd_color(FOREGROUND_BLUE)
     elif token_type == Token_Code.TK_BEGIN or token_type == Token_Code.TK_END:
         set_cmd_color(FOREGROUND_GREEN)
+    elif token_type in keyword_map.values():
+        set_cmd_color(FOREGROUND_RED)
     else:
         reset_color()
     print(word, end="", flush=True)

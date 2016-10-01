@@ -25,14 +25,18 @@ def reset_color():
     set_cmd_color(FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE)
 
 
-def printDarkBlue(mess):
+def print_dark_blue(mess):
     set_cmd_color(FOREGROUND_GREEN)
-
     print(mess)
-
     reset_color()
 
-
+dict={"a":1, "b":2}
 
 if __name__ == "__main__":
-    printDarkBlue("ddd")
+    print_dark_blue("ddd")
+    if 1  in (dict.values()):
+        print ("in")
+    else:
+        print("not in")
+
+
