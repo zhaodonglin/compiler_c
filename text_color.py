@@ -63,6 +63,9 @@ def get_token(f, ch):
         set_cmd_color(FOREGROUND_RED)
     else:
         reset_color()
+
+    if token_type == Token_Code.TK_CSTR:
+        word = "\"" + word + "\""
     print(word, end="", flush=True)
     next_char = get_ch(f)
     return next_char

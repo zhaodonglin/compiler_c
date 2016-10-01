@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4b77530-569f-4935-b45d-c1d3c7521531" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/color.py" afterPath="$PROJECT_DIR$/color.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/parser_sc.py" afterPath="$PROJECT_DIR$/parser_sc.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/text_color.py" afterPath="$PROJECT_DIR$/text_color.py" />
     </list>
     <ignored path="compiler_c.iws" />
@@ -59,8 +57,8 @@
       <file leaf-file-name="parser_sc.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/parser_sc.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-126">
-              <caret line="162" column="34" selection-start-line="162" selection-start-column="34" selection-end-line="162" selection-end-column="34" />
+            <state relative-caret-position="-183">
+              <caret line="170" column="4" selection-start-line="170" selection-start-column="4" selection-end-line="170" selection-end-column="4" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -103,8 +101,8 @@
       <file leaf-file-name="text_color.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/text_color.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="61" column="8" selection-start-line="61" selection-start-column="8" selection-end-line="61" selection-end-column="8" />
+            <state relative-caret-position="228">
+              <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -906,8 +904,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/parser_sc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-126">
-          <caret line="162" column="34" selection-start-line="162" selection-start-column="34" selection-end-line="162" selection-end-column="34" />
+        <state relative-caret-position="-183">
+          <caret line="170" column="4" selection-start-line="170" selection-start-column="4" selection-end-line="170" selection-end-column="4" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
@@ -916,8 +914,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/text_color.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="61" column="8" selection-start-line="61" selection-start-column="8" selection-end-line="61" selection-end-column="8" />
+        <state relative-caret-position="228">
+          <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
