@@ -165,9 +165,6 @@ def parse_identifer(f, ch):
         return identifier, key_word_type
 
 
-
-
-
 def parse_string(f):
     string = ""
     nxt_ch = get_ch(f)
